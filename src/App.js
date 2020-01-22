@@ -17,6 +17,12 @@ const Contenedor = styled.div`
 const Imagen = styled.img`
   max-width: 100%;
   margin-top: 5rem;
+
+  @media (max-width: 992px) {
+    height: 300px;
+    display: block;
+    margin: 0px auto;
+  }
 `;
 
 const Heading = styled.h1`

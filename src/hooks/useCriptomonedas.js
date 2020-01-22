@@ -21,13 +21,13 @@ const Select = styled.select`
     font-size: 1.2rem;
 `
 
-const useMoneda = (label, stateInicial, opciones) => {
+const useCriptomoneda = (label, stateInicial, opciones) => {
 
     // State de nuestro hook
     const [state, actualizarState] = useState('stateInicial');
 
 
-    const Seleccionar = () => (
+    const SelectCriptomoneda = () => (
         <Fragment>
             <Label>{label}</Label>
             <Select
@@ -35,16 +35,16 @@ const useMoneda = (label, stateInicial, opciones) => {
                 value={state}
             >
                 <option value="">- Seleccione -</option>
-                {opciones.map(opcion => (
+                {/* {opciones.map(opcion => (
                     <option key={opcion.codigo} value={opcion.codigo}>{opcion.nombre}</option>
-                ))}
+                ))} */}
             </Select>
         </Fragment>
     );
 
     // Retornar state, interfaz y fn que modifica el state
-    return [state, Seleccionar, actualizarState];
+    return [state, SelectCriptomoneda, actualizarState];
 
 }
 
-export default useMoneda;
+export default useCriptomoneda;
